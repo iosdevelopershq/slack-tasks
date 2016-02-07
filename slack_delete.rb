@@ -2,7 +2,7 @@ require 'net/http'
 require 'json'
 require 'uri'
 
-@token = ''
+@token = ENV['SLACK_TOKEN']
 
 def list_files
   ts_to = (Time.now - 30 * 24 * 60 * 60).to_i # 30 days ago
