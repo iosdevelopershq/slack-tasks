@@ -5,7 +5,7 @@ require 'uri'
 @token = ENV['SLACK_TOKEN']
 
 def list_files
-  ts_to = (Time.now - 5 * 24 * 60 * 60).to_i # 5 days ago
+  ts_to = (Time.now - 2 * 24 * 60 * 60).to_i # 2 days ago
   params = {
     token: @token,
     ts_to: ts_to,
